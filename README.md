@@ -64,11 +64,13 @@ gulp.task('stylesheets', function() {
 ```css
 /* loading */
 原来 ：
-.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH0mhJPWdZdpHzXg%3D%3D) no-repeat}
+.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH0mhJPW
+dZdpHzXg%3D%3D) no-repeat}
 ```
 ###为了节省CSS文件大小只截取生成MD5的前8位
 ```
-修改后 。.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH)  
+修改后 ：
+.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH)  
 ```
 
 
