@@ -12,7 +12,7 @@ npm install gulp-make-css-url-version-s
 ```
 
 ## 使用
-<p>默认MD5模式</p>
+默认MD5模式
 ```js
 var makeUrlVer = require('gulp-make-css-url-version-s');
 
