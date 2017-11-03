@@ -1,4 +1,4 @@
- 
+
 var path = require('path');
 var crypto = require('crypto');
 var fs = require('fs');
@@ -6,9 +6,9 @@ var fs = require('fs');
 var gutil = require('gulp-util');
 var through = require('through2');
 var Q = require('q');
-
+var ndate = new Date()
 var PLUGIN_NAME = 'gulp-make-css-url-version';
-var date = new Date();
+
 var getMD5 = function (data) {
     var hash = crypto.createHash("md5");
     hash.update(data);
@@ -27,7 +27,7 @@ var formatDate = function (format, date) {
         "q+": Math.floor((date.getMonth() + 3) / 3),
         "S": date.getMilliseconds()
     };
-    format = format.replace(/y{4}/, date.getFullYear()).replace(/y{10}/, date.getFullYear().toString().substring());
+    format = format.replace(/y{4}/, date.getFullYear()).replace(/y{2}/, date.getFullYear().toString().substring(2));
 
     for (var k in o) {
         var reg = new RegExp(k);
@@ -68,7 +68,7 @@ module.exports = function (options) {
         var promises = [];
 
         html = html.replace(/url\("?([^\)"]+)"?\)/g, function (str, url) {
-            
+
             //url = url.replace(/\?[\s\S]*$/, "").trim(); //font
             url = url.replace(/['"]*/g, "");
 
@@ -76,15 +76,15 @@ module.exports = function (options) {
                 return str;
             }
 
-            var format = options.format || + date.getDate() + date.getHours() + date.getMinutes() + date.getSeconds()+ date.getMilliseconds();
+            var format = options.format || ""+ndate.getDate() + ndate.getHours() + ndate.getMinutes() + ndate.getSeconds() + ndate.getMilliseconds();;
 
             //use date as the version
             if (options.useDate) {
-                return "url(" + url + "?v=" + format + ")";
+                return "url(" + url + "?v=" + formatDate(format, new Date()) + ")";
             }
 
             //use md5
-            var safeUrl = url.replace(/#[\s\S]*$/,'');
+            var safeUrl = url.replace(/#[\s\S]*$/, '');
             var imageFilePath;
             if (options.assetsDir) {
                 imageFilePath = path.join(options.assetsDir, safeUrl);
