@@ -56,7 +56,7 @@ gulp.task('stylesheets', function() {
 
 ```css
 /* loading */
-.i-loading{width:32px;height:32px;background:url(../images/loading.gif) no-repeat;}    
+.i-loading{width:32px;height:32px;background:url(../images/loading.gif) ;}    
 ```
 
 ### after: index.css
@@ -64,13 +64,12 @@ gulp.task('stylesheets', function() {
 ```css
 /* loading */
 原来 ：
-.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH0mhJPW
-dZdpHzXg%3D%3D) no-repeat}
+.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH0mhJPWdZdpHzXg%3D%3D)}
 ```
 ###为了节省CSS文件大小只截取生成MD5的前8位
 ```
 修改后 ：
-.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH)  
+.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH)  }
 ```
 
 
