@@ -68,11 +68,11 @@ gulp.task('stylesheets', function() {
 原来 ：
 .i-loading{background:url(../images/loading.gif?v=Je0sUcMH0mhJPWdZdpHzXg%3D%3D)}
 ```
-###为了节省CSS文件大小只截取生成MD5的前8位
+为了节省CSS文件大小只截取生成MD5的前8位
+
 ```css
 修改后 ：
 .i-loading{background:url(../images/loading.gif?v=Je0sUcMH)  }
 ```
-
 
 备注:这个包由 gulp-make-css-url-version 修改如有权限问题请联系我 17482174@qq.com
