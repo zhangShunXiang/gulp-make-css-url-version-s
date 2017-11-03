@@ -1,8 +1,9 @@
 ## gulp-make-css-url-version-s
 
 
-
-a plugin for gulp.js to replace version for images in css files,the version should be file's md5 or time stamp;
+优化了 gulp-make-css-url-version 增加版本号的方式：
+原来的日期模式是"yy-mm-dd" 修改成以毫秒为序列号
+原来的MD5模式引用字段过长引起CSS文件过大，现在截取前8位为版本号
 
 ## Installation
 
