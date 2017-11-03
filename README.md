@@ -1,9 +1,9 @@
 ## gulp-make-css-url-version-s
 
 
-优化了 gulp-make-css-url-version 增加版本号的方式：
-原来的日期模式是"yy-mm-dd" 修改成以毫秒为序列号
-原来的MD5模式引用字段过长引起CSS文件过大，现在截取前8位为版本号
+<p>优化了 gulp-make-css-url-version 增加版本号的方式：</p>
+<p>原来的日期模式是"yy-mm-dd" 修改成以毫秒为序列号</p>
+<p>原来的MD5模式引用字段过长引起CSS文件过大，现在截取前8位为版本号</p>
 
 ## Installation
 
