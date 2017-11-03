@@ -5,14 +5,14 @@
 <p>原来的日期模式是"yy-mm-dd" 修改成以毫秒为序列号</p>
 <p>原来的MD5模式引用字段过长引起CSS文件过大，现在截取前8位为版本号</p>
 
-## Installation
+## 安装
 
 ```bash
 npm install gulp-make-css-url-version-s
 ```
 
-## Usage
-
+## 使用
+<p>默认MD5模式</p>
 ```js
 var makeUrlVer = require('gulp-make-css-url-version-s');
 
@@ -23,9 +23,9 @@ gulp.task('stylesheets', function() {
 });
 ```
 
-## Options
+## 配置
 
-useDate :make version with time stamp
+<p>使用日期模式：</p>
 
 ```js
 var makeUrlVer = require('gulp-make-css-url-version-s');
@@ -68,7 +68,7 @@ gulp.task('stylesheets', function() {
 原来 ：
 .i-loading{background:url(../images/loading.gif?v=Je0sUcMH0mhJPWdZdpHzXg%3D%3D)}
 ```
-为了节省CSS文件大小只截取生成MD5的前8位
+为了节省CSS文件大小,只截取生成MD5的前8位
 
 ```css
 修改后 ：
