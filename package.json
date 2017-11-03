@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hellopao/gulp_plugin"
+    "url": "https://github.com/zhangShunXiang/gulp-make-css-url-version-tdw"
   },
   "author": {
     "name": "zhangshunxiang",
@@ -28,7 +28,7 @@
     "q":"^1.0.1"
   },
   "license": "MIT",
-  "homepage": "https://github.com/hellopao/gulp_plugin",
-  "_id": "gulp-make-css-url-tdw-version@0.0.13",
+  "homepage": "https://github.com/zhangShunXiang/gulp-make-css-url-version-tdw",
+  "_id": "gulp-make-css-url-tdw-version@0.0.1",
   "_from": "gulp-make-css-url-tdw-version@"
 }
