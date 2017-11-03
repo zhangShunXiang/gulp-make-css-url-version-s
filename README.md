@@ -1,4 +1,4 @@
-## gulp-make-css-url-version-tdw
+## gulp-make-css-url-version-s
 
 
 
@@ -7,13 +7,13 @@ a plugin for gulp.js to replace version for images in css files,the version shou
 ## Installation
 
 ```bash
-npm install gulp-make-css-url-version-tdw
+npm install gulp-make-css-url-version-s
 ```
 
 ## Usage
 
 ```js
-var makeUrlVer = require('gulp-make-css-url-version-tdw');
+var makeUrlVer = require('gulp-make-css-url-version-s');
 
 gulp.task('stylesheets', function() {
     gulp.src('css/*.css')
@@ -27,11 +27,12 @@ gulp.task('stylesheets', function() {
 useDate :make version with time stamp
 
 ```js
-var makeUrlVer = require('gulp-make-css-url-version-tdw');
+var makeUrlVer = require('gulp-make-css-url-version-s');
 
 gulp.task('stylesheets', function() {
     gulp.src('css/*.css')
-        .pipe(makeUrlVer({useDate:true}))  //修改后格式：03395445409(时间拼接精确到毫秒)  原格式：yy-mm-dd
+    //原格式：yy-mm-dd 修改后格式：03395445409(时间拼接精确到毫秒)  
+        .pipe(makeUrlVer({useDate:true}))  
         .pipe(gulp.dest('dist'))
 });
 ```
@@ -39,7 +40,7 @@ gulp.task('stylesheets', function() {
 assetsDir: specify the public directory for correct MD5 calculation in some specific cases
 
 ```js
-var makeUrlVer = require('gulp-make-css-url-version-tdw');
+var makeUrlVer = require('gulp-make-css-url-version-s');
 
 gulp.task('stylesheets', function() {
     gulp.src('css/*.css')
@@ -56,7 +57,7 @@ gulp.task('stylesheets', function() {
 
 ```css
 /* loading */
-.i-loading{width:32px;height:32px;background:url(../images/loading.gif) ;}    
+.i-loading{background:url(../images/loading.gif) ;}    
 ```
 
 ### after: index.css
@@ -64,13 +65,13 @@ gulp.task('stylesheets', function() {
 ```css
 /* loading */
 原来 ：
-.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH0mhJPWdZdpHzXg%3D%3D)}
+.i-loading{background:url(../images/loading.gif?v=Je0sUcMH0mhJPWdZdpHzXg%3D%3D)}
 ```
 ###为了节省CSS文件大小只截取生成MD5的前8位
-```
+```css
 修改后 ：
-.i-loading{width:32px;height:32px;background:url(../images/loading.gif?v=Je0sUcMH)  }
+.i-loading{background:url(../images/loading.gif?v=Je0sUcMH)  }
 ```
 
 
-#备注:这个包由 gulp-make-css-url-version 修改如有权限问题请联系我 17482174@qq.com
+备注:这个包由 gulp-make-css-url-version 修改如有权限问题请联系我 17482174@qq.com

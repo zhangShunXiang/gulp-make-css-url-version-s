@@ -15,9 +15,6 @@ var getMD5 = function (data) {
     var md5Base64 = hash.digest("base64");
     return md5Base64;
 };
-console.log(getMD5('20170121212504').substr(0,8))
-console.log(date)
-
 
 var formatDate = function (format, date) {
     date = date || new Date();
