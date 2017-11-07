@@ -93,4 +93,4 @@ gulp.task('stylesheets', function() {
 .i-loading{background:url(../images/loading.gif?v=Je0sUcMH)  }
 ```
 
-备注: 该插件由 gulp-make-css-url-version 修改如有权限问题请联系我 17482174@qq.com
+ 
