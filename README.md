@@ -45,8 +45,9 @@ var makeUrlVer = require('gulp-make-css-url-version-s');
 gulp.task('stylesheets', function() {
     gulp.src('css/*.css')
         .pipe(cssver({
-            //域名替换的路径 必须以'/'结束 
-            domainName:'../',  //  例如域名地址："//abc.com/images/abc.png" 用 '../' 替换后路径是'../images/abc.png'  
+            /*域名替换的路径 必须以'/'结束 ;
+            / 例如域名地址："//abc.com/images/abc.png" 用 '../' 替换后路径是'../images/abc.png'  */
+            domainName:'../',  
             //过滤不需要加版本号的域名 
             exincludeDomain:["//js.tdw.cn/","http://js.tuandai.com/"]}))
         .pipe(gulp.dest('dist'))
