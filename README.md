@@ -77,7 +77,7 @@ gulp.task('stylesheets', function() {
 ```css
 /* loading */
 .i-loading{background:url(../images/loading.gif) ;} 
-.logo{background:url(//js.abc.com/loading.png) ;}    
+.logo{background:url(//js.abc.com/images/loading.png) ;}    
    
 ```
 
@@ -86,7 +86,7 @@ gulp.task('stylesheets', function() {
 ```css
 /* loading */
 .i-loading{background:url(../images/loading.gif?v=Je0sUcMH)}
-.logo{background:url(//js.abc.com/logo.png?v=Je0sUcMH) ;}    
+.logo{background:url(//js.abc.com/images/logo.png?v=Je0sUcMH) ;}    
 ```
  
 
