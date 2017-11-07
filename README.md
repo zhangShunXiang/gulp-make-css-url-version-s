@@ -76,21 +76,18 @@ gulp.task('stylesheets', function() {
 
 ```css
 /* loading */
-.i-loading{background:url(../images/loading.gif) ;}    
+.i-loading{background:url(../images/loading.gif) ;} 
+.logo{background:url(//js.abc.com/loading.png) ;}    
+   
 ```
 
 ### after: index.css
 
 ```css
 /* loading */
-原来 ：
-.i-loading{background:url(../images/loading.gif?v=Je0sUcMH0mhJPWdZdpHzXg%3D%3D)}
+.i-loading{background:url(../images/loading.gif?v=Je0sUcMH)}
+.logo{background:url(//js.abc.com/logo.png?v=Je0sUcMH) ;}    
 ```
-为了节省CSS文件大小,只截取生成MD5的前8位
-
-```css
-修改后 ：
-.i-loading{background:url(../images/loading.gif?v=Je0sUcMH)  }
-```
+ 
 
  
