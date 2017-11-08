@@ -119,7 +119,7 @@ module.exports = function (options) {
                         return {
                             key: tempKey,
                             value: "url(" + oldurl + "?v=" + formatDate(format) + ")"
-                        };
+                        }; 
                     });
  
                 promises.push(promise);
