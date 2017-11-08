@@ -46,14 +46,12 @@ gulp.task('stylesheets', function() {
     gulp.src('css/*.css')
         .pipe(cssver({
             /*域名替换，路径必须以'/'结束 ;
-            / 例如" http://abc.com/images/logo.png" 用'../'替换后你可以处理的路径是'../images/logo.png' */
+              例如" http://abc.com/images/logo.png" 用'../'替换后你可以处理的路径是'../images/logo.png' */
             domainName:'../',  
             //过滤不需要加版本号的域名 
             exincludeDomain:["//abc.cn/","http://abc.com/"]}))
         .pipe(gulp.dest('dist'))
 });
-
-
 
 ```
 assetsDir: specify the public directory for correct MD5 calculation in some specific cases
