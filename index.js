@@ -121,7 +121,7 @@ module.exports = function (options) {
                             value: "url(" + oldurl + "?v=" + formatDate(format) + ")"
                         };
                     });
-
+ 
                 promises.push(promise);
 
                 return tempKey;
