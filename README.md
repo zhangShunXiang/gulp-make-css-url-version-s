@@ -49,7 +49,7 @@ gulp.task('stylesheets', function() {
               例如" http://abc.com/images/logo.png" 用'../'替换后你可以处理的路径是'../images/logo.png' */
             domainName:'../',  
             //过滤不需要加版本号的域名 
-            exincludeDomain:["//abc.cn/","http://abc.com/"]}))
+            excludeDomain:["//abc.cn/","http://abc.com/"]}))
         .pipe(gulp.dest('dist'))
 });
 

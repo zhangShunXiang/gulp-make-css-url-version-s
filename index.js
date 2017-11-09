@@ -46,12 +46,12 @@ module.exports = function (options) {
 
             var fileName = file.path.split(path.sep).pop();
 
-            var exincludeDomain = options.exincludeDomain
+            var excludeDomain = options.excludeDomain
             var newArr = [];
             //  过滤配置URL
             function fillterDomain() {
-                for (var i = 0; i < exincludeDomain.length; i++) {
-                    newArr.push(`url.indexOf("${exincludeDomain[i]}")`)
+                for (var i = 0; i < excludeDomain.length; i++) {
+                    newArr.push(`url.indexOf("${excludeDomain[i]}")`)
                 }
                 return newArr.join(">-1 || ").replace(/^".*"$/)
             }
