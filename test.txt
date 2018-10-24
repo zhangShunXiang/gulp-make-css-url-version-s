@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 addd-test
 test1
 
 test-branch
-=======
-test1
 
->>>>>>> master
